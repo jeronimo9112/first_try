@@ -2,26 +2,18 @@ package ua.yandex.roman;
 
 public class FirstProgram {
 	public static void main(String[] args) {
-		hello("world!");
-    hello("user!");
+    Point p1 = new Point();
+    p1.x = 5;
+    p1.y = 10;
 
-    double l = 5;
-    System.out.println("Площадь квадрата со стороной " + l + " равна " + area(l));
+    Point p2 = new Point();
+    p2.x = 5;
+    p2.y = 10;
 
-    double a = 3;
-    double b = 4;
-    System.out.println("Площадь прямоугольника со сторонами " + a + " и " + b + " = " + area(a,b));
+    System.out.println(distance(p1,p2));
   }
 
-  public static void hello(String somebody) {
-    System.out.println("hello, " + somebody);
-  }
-
-  public static double area (double len) {
-    return len * len;
-  }
-
-  public static double area (double a, double b) {
-    return a * b;
+  public static double distance(Point p1, Point p2){
+    return Math.sqrt(((p1.y - p1.x) * (p1.y - p1.x)) + ((p2.y - p2.x) * (p2.y - p2.x)));
   }
 }
